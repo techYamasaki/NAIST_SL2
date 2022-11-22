@@ -15,13 +15,13 @@ class TestCSVPrinter(unittest.TestCase):
         line = printer.read()
         self.assertEqual("bbb2", line[1][1])
     
-    def test_read3_2(self):
-        try:
-            printer = CSVPrinter("tests/sample.csv")
-            printer.read()
-            unittest.TestCase.fail("This line should not be invoked")
-        except FileNotFoundError as e:
-            print(e)
+    # def test_read3_2(self):
+    #     try:
+    #         printer = CSVPrinter("tests/sample.csv")
+    #         printer.read()
+    #         unittest.TestCase.fail("This line should not be invoked")
+    #     except FileNotFoundError as e:
+    #         print(e)
 
     def test_read3(self):
         with self.assertRaises(FileNotFoundError):
